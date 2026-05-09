@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whalmba WDB | Systems Architecture</title>
+
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/shield-halved.svg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -33,10 +37,12 @@
     <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
         <div class="text-xl font-bold tracking-tighter italic">WHALMBA <span class="text-gray-500 font-light">WDB</span>
         </div>
-        <div class="flex gap-6 items-center">
-            <span class="text-xs text-gray-500 tracking-widest uppercase">Houston Bureau</span>
+        <div class="flex gap-4 items-center">
+            <span class="hidden md:inline text-xs text-gray-500 tracking-widest uppercase">Houston Bureau</span>
             <a href="https://t.me/whalmba"
                 class="glass px-5 py-2 rounded-full text-sm hover:bg-white hover:text-black transition duration-300">Telegram</a>
+            <a href="mailto:ceo@whalmbawdb.com"
+                class="glass px-5 py-2 rounded-full text-sm border-white/30 hover:bg-white hover:text-black transition duration-300">Email</a>
         </div>
     </nav>
 
@@ -45,40 +51,58 @@
             Architecting Resilience <br> for the Top 1%.
         </h1>
         <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
-            We don't just "manage" accounts. We build the operational engine. Eliminating leaks, optimizing vault logic,
+            We don't just "manage" accounts. We build the operational engine—eliminating leaks, optimizing vault logic,
             and scaling with precision.
         </p>
         <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="https://t.me/whalmba"
-                class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition">Request a System
-                Audit</a>
+            <a href="mailto:ceo@whalmbawdb.com"
+                class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition">Contact the
+                Bureau</a>
             <div class="glass px-8 py-4 rounded-xl text-gray-300 border-white/20">Operational Status: Active</div>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto mt-32 px-6 grid md:grid-cols-3 gap-8">
-        <div class="glass p-8 rounded-3xl border-white/5">
-            <h3 class="text-xl font-bold mb-4">Vault Engineering</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">Turn your content library into a recurring revenue machine.
-                We architect the logic so your assets work while you sleep.</p>
-        </div>
-        <div class="glass p-8 rounded-3xl border-white/5">
-            <h3 class="text-xl font-bold mb-4">Human-Centric Flow</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">Kill the "robotic" agency feel. We design chat experiences
-                that build genuine trust and long-term fan retention.</p>
-        </div>
-        <div class="glass p-8 rounded-3xl border-white/5">
-            <h3 class="text-xl font-bold mb-4">Data Stability</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">Stop panicking about algorithm shifts. We build a
-                systems-based foundation that provides consistent results in any market.</p>
+    <section class="max-w-6xl mx-auto mt-32 px-6">
+        <h2 class="text-2xl font-bold mb-12 text-center tracking-widest uppercase text-gray-500">The 3-Tier Architecture
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass p-8 rounded-3xl border-white/5">
+                <div class="text-xs text-gray-500 mb-4 tracking-widest">TIER 01</div>
+                <h3 class="text-xl font-bold mb-4">Discovery (Top of Funnel)</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">Social platforms are your landing page feeders. If
+                    you aren't tracking traffic sources, you are flying blind.</p>
+                <ul class="text-xs text-gray-500 space-y-2">
+                    <li>• UTM Parameter Implementation</li>
+                    <li>• Identify Whale Generation (80/20 Rule)</li>
+                </ul>
+            </div>
+            <div class="glass p-8 rounded-3xl border-white/5">
+                <div class="text-xs text-gray-500 mb-4 tracking-widest">TIER 02</div>
+                <h3 class="text-xl font-bold mb-4">The Profile (Conversion)</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">Every element has a functional purpose. Scroll
+                    depth matters—don't lose 25% of conversions with a bad layout.</p>
+                <ul class="text-xs text-gray-500 space-y-2">
+                    <li>• High-Contrast Recognition</li>
+                    <li>• Immediate Value Proposition</li>
+                </ul>
+            </div>
+            <div class="glass p-8 rounded-3xl border-white/5 border-white/20">
+                <div class="text-xs text-gray-500 mb-4 tracking-widest">TIER 03</div>
+                <h3 class="text-xl font-bold mb-4">Retention & LTV</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">Chatting is Sales Engineering. We track Lifetime
+                    Value (LTV) to logically allocate your time.</p>
+                <div class="mt-4 p-3 bg-white/5 rounded-lg font-mono text-[10px] text-gray-300">
+                    ROI = (LTV - CPA) / CPA
+                </div>
+            </div>
         </div>
     </section>
 
     <footer class="mt-40 mb-20 text-center border-t border-white/10 pt-20">
         <div class="text-gray-500 text-sm mb-4 italic tracking-tight">Vantage Architecture | Willard Whalmba Mbameg
         </div>
-        <div class="text-2xl font-bold mb-2 tracking-tighter">(832) 786-9566</div>
-        <p class="text-gray-500 text-xs">WHALMBA WDB BUREAU &copy; 2026</p>
+        <div class="text-2xl font-bold mb-2 tracking-tighter">ceo@whalmbawdb.com</div>
+        <p class="text-gray-500 text-xs">WHALMBA WDB BUREAU &copy; 2026 | Houston, TX</p>
     </footer>
 
 </body>
