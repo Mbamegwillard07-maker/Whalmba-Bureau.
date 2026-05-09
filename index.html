@@ -10,99 +10,150 @@
         href="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/shield-halved.svg">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #050505;
+            background-color: #030303;
             color: #ffffff;
+            overflow-x: hidden;
         }
 
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* THE SCALING GLASS ANIMATION */
+        .glass-premium {
+            background: rgba(255, 255, 255, 0.015);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        .gradient-text {
-            background: linear-gradient(to right, #ffffff, #a1a1a1);
+        .glass-premium:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+
+        .cta-glow {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+            transition: 0.3s ease;
+        }
+
+        .cta-glow:hover {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+            background-color: #f3f4f6;
+            transform: scale(1.05);
+        }
+
+        .gradient-move {
+            background: linear-gradient(90deg, #ffffff, #888888, #ffffff);
+            background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: shine 8s linear infinite;
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .ambient-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0) 70%);
+            z-index: -1;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
         }
     </style>
 </head>
 
 <body class="antialiased">
 
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <div class="text-xl font-bold tracking-tighter italic">WHALMBA <span class="text-gray-500 font-light">WDB</span>
-        </div>
-        <div class="flex gap-4 items-center">
-            <span class="hidden md:inline text-xs text-gray-500 tracking-widest uppercase">Houston Bureau</span>
+    <div class="ambient-glow"></div>
+
+    <nav class="p-8 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="text-2xl font-bold tracking-tighter italic uppercase">WHALMBA <span
+                class="text-gray-600 font-extralight italic">WDB</span></div>
+        <div class="flex gap-6 items-center">
             <a href="https://t.me/whalmba"
-                class="glass px-5 py-2 rounded-full text-sm hover:bg-white hover:text-black transition duration-300">Telegram</a>
+                class="text-xs uppercase tracking-widest text-gray-500 hover:text-white transition">Telegram</a>
             <a href="mailto:ceo@whalmbawdb.com"
-                class="glass px-5 py-2 rounded-full text-sm border-white/30 hover:bg-white hover:text-black transition duration-300">Email</a>
+                class="glass-premium px-6 py-2 rounded-full text-xs uppercase tracking-widest hover:bg-white hover:text-black transition">Access
+                Bureau</a>
         </div>
     </nav>
 
-    <section class="max-w-4xl mx-auto mt-20 px-6 text-center">
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 gradient-text">
-            Architecting Resilience <br> for the Top 1%.
+    <section class="max-w-5xl mx-auto mt-28 px-6 text-center">
+        <div
+            class="inline-block glass-premium px-4 py-1 rounded-full text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-8">
+            Operational Status: Active
+        </div>
+        <h1 class="text-6xl md:text-8xl font-bold tracking-tight mb-8 gradient-move">
+            Architecting Resilience.
         </h1>
-        <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
-            We don't just "manage" accounts. We build the operational engine—eliminating leaks, optimizing vault logic,
-            and scaling with precision.
+        <p class="text-gray-500 text-lg md:text-xl mb-14 max-w-2xl mx-auto font-light leading-relaxed">
+            We build the operational engine—eliminating leaks, optimizing vault logic, and scaling with precision.
         </p>
-        <div class="flex flex-col md:flex-row justify-center gap-4">
+
+        <div class="flex flex-col md:flex-row justify-center gap-6 items-center">
             <a href="mailto:ceo@whalmbawdb.com"
-                class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition">Contact the
-                Bureau</a>
-            <div class="glass px-8 py-4 rounded-xl text-gray-300 border-white/20">Operational Status: Active</div>
+                class="cta-glow bg-white text-black px-12 py-5 rounded-xl font-bold text-sm tracking-widest uppercase transition">
+                Book a Systems Audit
+            </a>
+            <span class="text-gray-600 text-xs tracking-widest uppercase">Limited Tier Capacity</span>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto mt-32 px-6">
-        <h2 class="text-2xl font-bold mb-12 text-center tracking-widest uppercase text-gray-500">The 3-Tier Architecture
+    <section class="max-w-6xl mx-auto mt-44 px-6 mb-32">
+        <h2 class="text-center text-gray-500 text-xs tracking-[0.5em] uppercase mb-16">The Data-Driven Funnel Protocol
         </h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass p-8 rounded-3xl border-white/5">
-                <div class="text-xs text-gray-500 mb-4 tracking-widest">TIER 01</div>
-                <h3 class="text-xl font-bold mb-4">Discovery (Top of Funnel)</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">Social platforms are your landing page feeders. If
-                    you aren't tracking traffic sources, you are flying blind.</p>
-                <ul class="text-xs text-gray-500 space-y-2">
-                    <li>• UTM Parameter Implementation</li>
-                    <li>• Identify Whale Generation (80/20 Rule)</li>
-                </ul>
+            <div class="glass-premium p-10 rounded-2xl">
+                <div class="text-[10px] text-gray-600 tracking-[0.5em] uppercase mb-10">Discovery</div>
+                <h3 class="text-xl font-light mb-4">Top of Funnel</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">Social platforms are landing page feeders. We
+                    implement unique UTM parameters to identify which 20% of effort generates 80% of your "Whales".</p>
             </div>
-            <div class="glass p-8 rounded-3xl border-white/5">
-                <div class="text-xs text-gray-500 mb-4 tracking-widest">TIER 02</div>
-                <h3 class="text-xl font-bold mb-4">The Profile (Conversion)</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">Every element has a functional purpose. Scroll
-                    depth matters—don't lose 25% of conversions with a bad layout.</p>
-                <ul class="text-xs text-gray-500 space-y-2">
-                    <li>• High-Contrast Recognition</li>
-                    <li>• Immediate Value Proposition</li>
-                </ul>
+
+            <div class="glass-premium p-10 rounded-2xl border-white/10">
+                <div class="text-[10px] text-gray-300 tracking-[0.5em] uppercase mb-10">Optimization</div>
+                <h3 class="text-xl font-light mb-4">The Profile</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Every element must serve a functional purpose to
+                    bridge curiosity and subscription. If a user scrolls more than twice to find a link, you've lost 25%
+                    of potential conversion.</p>
             </div>
-            <div class="glass p-8 rounded-3xl border-white/5 border-white/20">
-                <div class="text-xs text-gray-500 mb-4 tracking-widest">TIER 03</div>
-                <h3 class="text-xl font-bold mb-4">Retention & LTV</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">Chatting is Sales Engineering. We track Lifetime
-                    Value (LTV) to logically allocate your time.</p>
-                <div class="mt-4 p-3 bg-white/5 rounded-lg font-mono text-[10px] text-gray-300">
+
+            <div class="glass-premium p-10 rounded-2xl">
+                <div class="text-[10px] text-gray-600 tracking-[0.5em] uppercase mb-10">Retention</div>
+                <h3 class="text-xl font-light mb-4">Sales Engineering</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">Chatting is Sales Engineering. We determine ROI by
+                    mathematically allocating your time based on Lifetime Value (LTV).</p>
+                <div class="mt-4 p-3 bg-white/5 rounded-lg font-mono text-[10px] text-gray-400">
                     ROI = (LTV - CPA) / CPA
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="mt-40 mb-20 text-center border-t border-white/10 pt-20">
-        <div class="text-gray-500 text-sm mb-4 italic tracking-tight">Vantage Architecture | Willard Whalmba Mbameg
+    <footer class="py-20 text-center border-t border-white/5">
+        <div class="mb-10">
+            <h2 class="text-2xl font-bold tracking-tighter mb-4">Ready for a System Audit?</h2>
+            <div class="text-xl font-bold mb-2 tracking-tighter">832-786-9566</div>
+            <a href="mailto:ceo@whalmbawdb.com"
+                class="text-white border-b border-white/20 pb-2 hover:border-white transition italic">ceo@whalmbawdb.com</a>
         </div>
-        <div class="text-2xl font-bold mb-2 tracking-tighter">ceo@whalmbawdb.com</div>
-        <p class="text-gray-500 text-xs">WHALMBA WDB BUREAU &copy; 2026 | Houston, TX</p>
+        <p class="text-gray-700 text-[10px] tracking-[1em] uppercase mb-4">Whalmba WDB Bureau | Houston, TX</p>
+        <p class="text-gray-800 text-[9px] uppercase tracking-widest">Developer & Agency Partner | Willard Whalmba
+            Mbameg</p>
     </footer>
 
 </body>
