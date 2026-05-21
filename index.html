@@ -31,9 +31,8 @@
         .glass-premium:hover {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            transform: scale(1.03);
+            transform: scale(1.02);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            z-index: 10;
         }
 
         .cta-glow {
@@ -44,7 +43,7 @@
         .cta-glow:hover {
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
             background-color: #f3f4f6;
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
 
         .gradient-move {
@@ -71,6 +70,22 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
+        input,
+        select,
+        textarea {
+            background: rgba(255, 255, 255, 0.02) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            color: #ffffff;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: rgba(255, 255, 255, 0.3) !important;
+            outline: none;
+        }
     </style>
 </head>
 
@@ -92,9 +107,9 @@
         <div class="flex gap-6 items-center">
             <a href="https://t.me/whalmba"
                 class="text-xs uppercase tracking-widest text-gray-500 hover:text-white transition">Telegram</a>
-            <a href="mailto:ceo@whalmbawdb.com"
-                class="glass-premium px-6 py-2 rounded-full text-xs uppercase tracking-widest hover:bg-white hover:text-black transition">Access
-                Bureau</a>
+            <a href="#audit"
+                class="glass-premium px-6 py-2 rounded-full text-xs uppercase tracking-widest hover:bg-white hover:text-black transition">Initialize
+                Audit</a>
         </div>
     </nav>
 
@@ -107,15 +122,16 @@
             Architecting Resilience.
         </h1>
         <p class="text-gray-500 text-lg md:text-xl mb-14 max-w-2xl mx-auto font-light leading-relaxed">
-            We build the operational engine eliminating leaks, optimizing vault logic, and scaling with precision.
+            We optimize backend operations, chat monetization mechanics, and subscriber retention architecture for
+            high-volume creator accounts.
         </p>
 
         <div class="flex flex-col md:flex-row justify-center gap-6 items-center">
-            <a href="mailto:ceo@whalmbawdb.com"
+            <a href="#audit"
                 class="cta-glow bg-white text-black px-12 py-5 rounded-xl font-bold text-sm tracking-widest uppercase transition">
-                Book a Systems Audit
+                Request Diagnostic Audit
             </a>
-            <span class="text-gray-600 text-xs tracking-widest uppercase">Limited Tier Capacity</span>
+            <span class="text-gray-600 text-xs tracking-widest uppercase">Limited Account Capacity</span>
         </div>
     </section>
 
@@ -123,34 +139,83 @@
         <h2 class="text-center text-gray-500 text-xs tracking-[0.5em] uppercase mb-16">The 3-Tier Architecture</h2>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="glass-premium p-10 rounded-2xl">
-                <div class="text-[10px] text-gray-600 tracking-[0.5em] uppercase mb-10">Tier 01</div>
-                <h3 class="text-xl font-light mb-4">Discovery (Top of Funnel)</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6">Social platforms are your landing page feeders. If
-                    you aren't tracking traffic sources, you are flying blind.</p>
-                <ul class="text-xs text-gray-500 space-y-2">
-                    <li>UTM Parameter Implementation</li>
-                    <li>Identify Whale Generation (80/20 Rule)</li>
-                </ul>
+                <div class="text-[10px] text-gray-600 tracking-[0.5em] uppercase mb-10">Tier 01 // Data Layer</div>
+                <h3 class="text-xl font-light mb-4">Discovery Funnels</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">External social platforms serve as your primary
+                    intake infrastructure. Without custom tracking routes, monetization routing operates blindly.</p>
+                <div class="text-[10px] text-gray-400 font-mono bg-white/5 p-3 rounded">
+                    Optimization Target: Sub-10% Funnel Churn
+                </div>
             </div>
             <div class="glass-premium p-10 rounded-2xl border-white/10">
-                <div class="text-[10px] text-gray-300 tracking-[0.5em] uppercase mb-10">Tier 02</div>
-                <h3 class="text-xl font-light mb-4">The Profile (Conversion)</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">Every element must serve a functional purpose.
-                    Scroll depth matters don't lose 25% of conversions with a bad layout.</p>
-                <ul class="text-xs text-gray-500 space-y-2">
-                    <li>High-Contrast Recognition</li>
-                    <li>Immediate Value Proposition</li>
-                </ul>
+                <div class="text-[10px] text-gray-300 tracking-[0.5em] uppercase mb-10">Tier 02 // Interface</div>
+                <h3 class="text-xl font-light mb-4">Conversion Interfaces</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Every visual asset must fulfill a quantitative
+                    purpose. Suboptimal positioning leaks up to 25% of immediate subscriber intent.</p>
+                <div class="text-[10px] text-gray-400 font-mono bg-white/5 p-3 rounded">
+                    Variables: 3-Second Value Recognition
+                </div>
             </div>
             <div class="glass-premium p-10 rounded-2xl">
-                <div class="text-[10px] text-gray-600 tracking-[0.5em] uppercase mb-10">Tier 03</div>
-                <h3 class="text-xl font-light mb-4">Retention & LTV</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6">Chatting is Sales Engineering. We track Lifetime
-                    Value (LTV) to logically allocate your time.</p>
-                <div class="mt-4 p-3 bg-white/5 rounded-lg font-mono text-[10px] text-gray-400">
+                <div class="text-[10px] text-gray-600 tracking-[0.5em] uppercase mb-10">Tier 03 // Capitalization</div>
+                <h3 class="text-xl font-light mb-4">Retention Engineering</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">High-frequency chatting is systematic sales
+                    engineering. We optimize Lifetime Value maps to allocate operational capacity efficiently.</p>
+                <div class="mt-4 p-3 bg-white/5 rounded font-mono text-[10px] text-gray-400">
                     ROI = (LTV - CPA) / CPA
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto mt-32 px-6 mb-32">
+        <h2 class="text-center text-gray-500 text-xs tracking-[0.5em] uppercase mb-16">Operational Logs</h2>
+        <div class="glass-premium p-8 rounded-2xl font-mono text-xs text-gray-400 space-y-4 max-w-3xl mx-auto">
+            <div class="flex justify-between border-b border-white/5 pb-2">
+                <span class="text-gray-600">[CASE PROFILE #092]</span>
+                <span class="text-green-500">RESOLVED</span>
+            </div>
+            <p>Identified a 32% capital leakage within top-of-funnel conversion. Remapped interface contrast ratios and
+                eliminated navigation depth overhead on external feeders. Subscriptions stabilized within 72 hours.</p>
+        </div>
+    </section>
+
+    <section id="audit" class="max-w-3xl mx-auto px-6 py-20 scroll-mt-12">
+        <div class="glass-premium p-12 rounded-2xl">
+            <h3 class="text-2xl font-bold text-center mb-2">Initialize System Diagnostics</h3>
+            <p class="text-gray-500 text-sm text-center mb-10">Identify operational infrastructure vulnerabilities.</p>
+
+            <form action="mailto:ceo@whalmbawdb.com" method="post" enctype="text/plain" class="space-y-6">
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-mono">Primary
+                        Traffic Source</label>
+                    <select name="Traffic Source" class="w-full rounded-lg p-4 text-sm">
+                        <option value="TikTok/Reels">Short-Form Mobile (TikTok/Reels)</option>
+                        <option value="Reddit">Reddit Content Vectors</option>
+                        <option value="Instagram">Instagram Network Feeders</option>
+                        <option value="Other">Alternative Infrastructure</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-mono">Primary
+                        System Leak</label>
+                    <select name="Primary Bottleneck" class="w-full rounded-lg p-4 text-sm">
+                        <option value="Chat Monetization">Low DM Conversion Rates (Chat Leak)</option>
+                        <option value="Subscriber Churn">High Subscriber Decay (Retention Leak)</option>
+                        <option value="Traffic Flow">Low Landing Page Velocity (Traffic Leak)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-mono">Current
+                        System Parameters</label>
+                    <textarea name="System Notes" rows="4" class="w-full rounded-lg p-4 text-sm"
+                        placeholder="Provide raw data or specify manual headaches (e.g., chat processing backlogs)..."></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-white text-black py-4 rounded-xl font-bold text-sm uppercase tracking-widest cta-glow">
+                    Submit Variables for Audit
+                </button>
+            </form>
         </div>
     </section>
 
